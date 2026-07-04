@@ -83,3 +83,77 @@ if (lightbox && lightboxImg && galleryImages.length > 0) {
     });
 
 }
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const message = document.getElementById("message").value;
+
+    const whatsappNumber = "919633335918"; // Your WhatsApp number (country code + number)
+
+    const text =
+`Hello GreenSketches,
+
+I would like to enquire about your landscaping services.
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+
+Project Details:
+${message}`;
+
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+
+    window.open(url, "_blank");
+});
+document.querySelectorAll(".contact-form input, .contact-form textarea")
+.forEach(field => {
+
+    field.addEventListener("input", function () {
+        if (this.value.trim() !== "") {
+            this.classList.add("active");
+        } else {
+            this.classList.remove("active");
+        }
+    });
+
+});
+const menuBtn = document.getElementById("menu-btn");
+const mobileMenu = document.getElementById("mobile-menu");
+
+menuBtn.addEventListener("click", () => {
+
+    if (mobileMenu.style.right === "0px") {
+
+        mobileMenu.style.right = "-100%";
+
+    } else {
+
+        mobileMenu.style.right = "0";
+
+    }
+
+});
+function setHeroImages() {
+  const isMobile = window.innerWidth <= 768;
+
+  const slides = document.querySelectorAll(".slide");
+
+  slides[0].style.backgroundImage = isMobile
+    ? "url('images/hero1-mobile.jpg')"
+    : "url('images/hero1.jpeg')";
+
+  slides[1].style.backgroundImage = isMobile
+    ? "url('images/hero2-mobile.jpg')"
+    : "url('images/hero2.jpeg')";
+
+  slides[2].style.backgroundImage = isMobile
+    ? "url('images/hero3-mobile.jpg')"
+    : "url('images/hero3.jpeg')";
+}
+
+window.addEventListener("load", setHeroImages);
+window.addEventListener("resize", setHeroImages);
