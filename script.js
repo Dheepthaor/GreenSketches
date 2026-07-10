@@ -157,3 +157,72 @@ function setHeroImages() {
 
 window.addEventListener("load", setHeroImages);
 window.addEventListener("resize", setHeroImages);
+/*=========================================
+TESTIMONIALS REVEAL ANIMATION
+=========================================*/
+
+const revealElements = document.querySelectorAll(".reveal");
+
+const revealOnScroll = () => {
+
+    revealElements.forEach((el) => {
+
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+
+        if (elementTop < windowHeight - 100) {
+            el.classList.add("active");
+        }
+
+    });
+
+};
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+
+
+/*=========================================
+VIDEO AUTO PAUSE
+=========================================*/
+
+const videos = document.querySelectorAll(".video-card video");
+
+videos.forEach((video) => {
+
+    video.addEventListener("play", () => {
+
+        videos.forEach((otherVideo) => {
+
+            if (otherVideo !== video) {
+                otherVideo.pause();
+            }
+
+        });
+
+    });
+
+});
+
+
+/*=========================================
+TESTIMONIAL CARD HOVER EFFECT
+=========================================*/
+
+const testimonialCards = document.querySelectorAll(".testimonial-card");
+
+testimonialCards.forEach((card) => {
+
+    card.addEventListener("mouseenter", () => {
+
+        card.style.transform = "translateY(-10px)";
+
+    });
+
+    card.addEventListener("mouseleave", () => {
+
+        card.style.transform = "";
+
+    });
+
+});

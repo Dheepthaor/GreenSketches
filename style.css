@@ -772,3 +772,478 @@ background:rgb(214, 206, 99);
     z-index:1;
 
 }
+/* ===========================================================
+   TESTIMONIALS SECTION
+=========================================================== */
+
+#testimonials{
+    position: relative;
+}
+
+.testimonial-card{
+    background: rgba(19,35,23,.75);
+    backdrop-filter: blur(18px);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:28px;
+    padding:35px;
+    transition:.4s ease;
+    display:flex;
+    flex-direction:column;
+    height:100%;
+}
+
+.testimonial-card:hover{
+    transform:translateY(-8px);
+    border-color:#c9a84c;
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+}
+
+.quote-icon{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#c9a84c;
+    color:#08130c;
+    font-size:24px;
+    margin-bottom:25px;
+}
+
+.stars{
+    color:#c9a84c;
+    font-size:22px;
+    letter-spacing:4px;
+    margin-bottom:18px;
+}
+
+.testimonial-text{
+    color:#d3d3d3;
+    line-height:1.9;
+    font-size:16px;
+    flex:1;
+}
+
+.testimonial-user{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-top:30px;
+}
+
+.user-image{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#c9a84c;
+    color:#08130c;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+}
+
+.testimonial-user h4{
+    font-size:20px;
+    font-weight:600;
+}
+
+.testimonial-user span{
+    color:#b5b5b5;
+    font-size:14px;
+}
+
+/* ===========================================================
+VIDEO CARDS
+=========================================================== */
+
+.video-card{
+
+    background:#132317;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:28px;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.video-card:hover{
+
+    transform:translateY(-8px);
+    border-color:#c9a84c;
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+
+}
+
+.video-card video{
+
+    width:100%;
+    display:block;
+    aspect-ratio:16/9;
+    object-fit:cover;
+    background:#000;
+
+}
+
+.video-content{
+
+    padding:30px;
+
+}
+
+.video-content h3{
+
+    font-family:'Playfair Display',serif;
+    font-size:34px;
+    margin-bottom:14px;
+
+}
+
+.video-content p{
+
+    color:#cfcfcf;
+    line-height:1.8;
+
+}
+
+/* ===========================================================
+GOOGLE REVIEW
+=========================================================== */
+
+.google-review{
+
+    margin-top:90px;
+
+    background:#132317;
+
+    border-radius:30px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    padding:45px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:40px;
+
+    transition:.4s;
+
+}
+
+.google-review:hover{
+
+    border-color:#c9a84c;
+
+}
+
+.google-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+.google-left img{
+
+    width:70px;
+
+}
+
+.google-left h3{
+
+    font-size:34px;
+
+    font-family:'Playfair Display',serif;
+
+}
+
+.google-left p{
+
+    color:#bfbfbf;
+
+    margin-top:8px;
+
+}
+
+.google-rating{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.rating-number{
+
+    font-size:60px;
+
+    color:#c9a84c;
+
+    font-weight:700;
+
+}
+
+.google-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-top:20px;
+
+    background:#c9a84c;
+
+    color:#08130c;
+
+    padding:15px 30px;
+
+    border-radius:999px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.google-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:white;
+
+}
+
+/* ===========================================================
+RESPONSIVE
+=========================================================== */
+
+@media(max-width:1024px){
+
+.google-review{
+
+flex-direction:column;
+text-align:center;
+
+}
+
+.google-left{
+
+flex-direction:column;
+
+}
+
+.google-rating{
+
+justify-content:center;
+
+}
+
+}
+
+@media(max-width:768px){
+
+#testimonials{
+
+padding-top:90px;
+padding-bottom:90px;
+
+}
+
+.testimonial-card{
+
+padding:28px;
+
+}
+
+.video-content{
+
+padding:24px;
+
+}
+
+.video-content h3{
+
+font-size:28px;
+
+}
+
+.google-review{
+
+padding:30px;
+
+}
+
+.google-left h3{
+
+font-size:28px;
+
+}
+
+.rating-number{
+
+font-size:48px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.testimonial-card{
+
+padding:22px;
+
+}
+
+.quote-icon{
+
+width:52px;
+height:52px;
+font-size:20px;
+
+}
+
+.stars{
+
+font-size:18px;
+
+}
+
+.testimonial-text{
+
+font-size:15px;
+
+}
+
+.user-image{
+
+width:55px;
+height:55px;
+font-size:20px;
+
+}
+
+.testimonial-user h4{
+
+font-size:18px;
+
+}
+
+.video-content h3{
+
+font-size:24px;
+
+}
+
+.google-left img{
+
+width:55px;
+
+}
+
+.google-left h3{
+
+font-size:24px;
+
+}
+
+.rating-number{
+
+font-size:40px;
+
+}
+
+.google-btn{
+
+width:100%;
+justify-content:center;
+
+}
+
+}
+/* Reveal Animation */
+
+.reveal{
+    opacity:0;
+    transform:translateY(60px);
+    transition:all .8s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* Smooth Video Zoom */
+
+.video-card{
+    overflow:hidden;
+}
+
+.video-card video{
+    transition:transform .5s ease;
+}
+
+.video-card:hover video{
+    transform:scale(1.05);
+}
+
+/* Gold Glow */
+
+.testimonial-card:hover,
+.video-card:hover,
+.google-review:hover{
+
+    box-shadow:
+    0 0 25px rgba(201,168,76,.15),
+    0 25px 60px rgba(0,0,0,.4);
+
+}
+
+/* Button Animation */
+
+.google-btn i{
+
+    transition:.3s;
+
+}
+
+.google-btn:hover i{
+
+    transform:translateX(6px);
+
+}
+
+/* Star Animation */
+
+.stars{
+
+    animation:starGlow 2s infinite alternate;
+
+}
+
+@keyframes starGlow{
+
+    from{
+        opacity:.7;
+    }
+
+    to{
+        opacity:1;
+        text-shadow:0 0 10px #c9a84c;
+    }
+
+}
